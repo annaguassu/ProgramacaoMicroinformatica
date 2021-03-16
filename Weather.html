@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 01</title>
+</head>
+<body>
+    <h1>Exercício 1</h1>
+<form id="form">
+    <input id="weather" type="text" placeholder="Insira a estação do ano">
+    <button id="botao">Enviar</button>
+</form>
+<div id="login"></div>
+
+<script>
+    function main(event){
+        event.preventDefault()
+
+        if (weather.value === 'Verão'){login.innerHTML = <p> Mosquitos e suor o dia todo! A menos que seja rico e/ou tenha ar condicionado :p</p>}
+        else if (weather.value === 'Primavera'){login.innerHTML = <p> Era pra ser um clima fresco, mas a gente sabe que aqui no BR todas as estações se parecem com uma só</p>}
+        else if (weather.value === 'Outono'){login.innerHTML = <p> Calor do mesmo jeito</p>}
+        else if (weather.value === 'Inverno'){login.innerHTML = <p> Ou um inferno gelado, ou um mormaço com ar seco!</p>}
+        else {login.innerHTML = ''}
+    }
+form.addEventListener('submit', main)
+</script>
+</body>
+</html>
