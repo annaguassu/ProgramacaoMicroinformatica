@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>intervalo entre dois numeros: ordem decrescente</title>
+    <link rel="stylesheet" href="..\aula 05\base.css">
+</head>
+<body>
+    <h1>Exemplo 02</h1>
+
+    <form id ="form">
+        <input id="inicial" type="number" placeholder="Digite um número">
+        <input id="final" type="number" placeholder="Digite outro numero">
+        <button>Enviar</button>
+    </form>
+
+    <div id="resultado"></div>
+
+    <script>
+        function main(event){
+            event.preventDefault()
+
+            let n1 = parseFloat(inicial.value)
+            let n2 = parseFloat(final.value)
+
+            resultado.innerHTML = ''
+            
+            if (n1 > n2){
+                for (let i = n1; n2 < i; --i){
+                    resultado.innerHTML += `${i}, `
+                }
+                resultado.innerHTML += n2
+            } else {
+                for (let i = n2; n1 < i; --i){
+                    resultado.innerHTML += `${i}, `
+                }
+                resultado.innerHTML += n1
+            }
+            
+        }
+        form.addEventListener('submit', main)
+    </script>
+</body>
+</html>
